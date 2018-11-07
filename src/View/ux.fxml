@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+          prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.161" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="Controller.Controller">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="300.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1000.0" minWidth="10.0" prefWidth="700.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+    </rowConstraints>
+    <children>
+        <TabPane fx:id="TabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="SELECTED_TAB"
+                 GridPane.columnIndex="1">
+            <tabs>
+                <Tab text="Color image">
+                    <content>
+                        <ImageView fx:id="imageCall" fitHeight="570.0" fitWidth="700.0" pickOnBounds="true"
+                                   preserveRatio="true"/>
+                    </content>
+                </Tab>
+                <Tab text="Filtered Image">
+                    <content>
+                        <ImageView fx:id="grayImage" fitHeight="571.0" fitWidth="700.0" pickOnBounds="true"
+                                   preserveRatio="true"/>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <VBox prefHeight="200.0" prefWidth="100.0">
+            <children>
+                <VBox prefHeight="184.0" prefWidth="300.0">
+                    <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0"/>
+                        <Button mnemonicParsing="false" onAction="#handleOpenAction" prefHeight="188.0"
+                                prefWidth="318.0" text="open"/>
+                    </children>
+                </VBox>
+                <HBox prefHeight="176.0" prefWidth="300.0">
+                    <children>
+                        <VBox prefHeight="100.0" prefWidth="300.0">
+                            <children>
+                                <Label alignment="CENTER" prefHeight="21.0" prefWidth="317.0" text="Threshold"/>
+                                <Slider fx:id="slider" max="255.0" min="1.0" prefHeight="150.0" prefWidth="126.0"
+                                        showTickLabels="true" showTickMarks="true"/>
+                                <Label alignment="CENTER" prefHeight="21.0" prefWidth="312.0" text="cluster size"/>
+                                <Slider fx:id="clusterSize" max="100.0" min="1.0" prefHeight="150.0" prefWidth="300.0"
+                                        showTickLabels="true" showTickMarks="true"/>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox prefHeight="184.0" prefWidth="300.0">
+                    <children>
+                        <HBox prefHeight="184.0" prefWidth="150.0">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#grayScale" prefHeight="192.0"
+                                        prefWidth="159.0" text="Black and White"/>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="184.0" prefWidth="150.0">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#counter" prefHeight="218.0" prefWidth="195.0"
+                                        text="Count Sheep"/>
+                            </children>
+                        </HBox>
+                    </children>
+                </HBox>
+                <HBox prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <Label fx:id="count" alignment="CENTER" prefHeight="94.0" prefWidth="310.0"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</GridPane>
