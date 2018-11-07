@@ -13,3 +13,5 @@
 - [x] Sliders added for on the fly adjustments
 - [ ] Better Thresholding
 - [ ] Put boxes on found clusters
+
+![running](https://content-repo.me/creations/20181107_141030.gif)
