@@ -14,4 +14,4 @@
 - [ ] Better Thresholding
 - [ ] Put boxes on found clusters
 
-![running](https://content-repo.me/creations/20181108_113355.gif)
+![running](20181108_113355.gif)
