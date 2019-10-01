@@ -12,6 +12,6 @@
 - [x] Counter implemented
 - [x] Sliders added for on the fly adjustments
 - [ ] Better Thresholding
-- [ ] Put boxes on found clusters
+
 
 ![running](20181108_113355.gif)
